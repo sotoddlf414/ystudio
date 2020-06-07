@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
+
+.clearfix:after{content:''; display:block; clear:both;}
+
+/* header */
+header{position:fixed; top:0; width:100%; height:120px; padding-top: 13px;}
+header .innerHeader{width:93%; margin: 0 auto; position:relative;}
+header a.logo{width:160px; height:60px; position: absolute; top:20px;}
+header a.logo img{width:100%; height:100%; }
+
+header .welcome{float:left;margin-left: 310px; color:#fff; font-size: 18px; font-weight: bold;}
+header .welcome a{padding:40px; display: inline-block;}
+
+header .openGnb{position: relative; text-transform: uppercase; float:right; color:#fff; font-size: 18px; font-weight: bold;}
+header .openGnb a{padding:40px; padding-right: 80px;}
+header .openGnb span{font-size: 32px; position: absolute; top:32px; left:110px;}
+/* header -end*/
+
+/* <section class="slide"> */
+section.slide{background: url(../img/visual1.jpg); width:100%; height:100vh; padding-top:300px; box-sizing: border-box;}
+section.slide .container{ position: relative; color:#fff; width:80%; margin:0 auto;}
+section.slide .container h3{font-size: 18px; margin-bottom: 20px;}
+section.slide .container p{font-size: 65px; font-weight: bold; line-height: 1.3em;}
+section.slide .container h4{font-size: 18px; margin-top: 30px;}
+
+section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-140px; transform: rotate(-90deg);}
+/* <section class="slide - end */
+
+/* <section class="brand"> */
+section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
+section.brand .container{ width:62%; margin:0 auto;}
+section.brand .container .leftBox{float:left;}
+section.brand .container .leftBox h2{font-size: 28px; position:relative;}
+section.brand .container .leftBox h2:before{z-index:301; content:'"'; font-size: 150px; position: absolute; top:160px; left:30px;}
+section.brand .container .leftBox h2:after{ z-index:300; border-radius: 50%; left:50px; top:120px; content:''; width:90px; height:90px; background-color: rgb(255,236,3); position: absolute;}
+
+section.brand .container .leftBox h3{margin-top: 300px; font-size: 36px;}
+
+section.brand .container .rightBox{position: relative; float:left; margin-left: 100px;}
+section.brand .container .rightBox p{font-size: 24px; line-height: 1.3em;}
+section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
+section.brand .container .rightBox h4{padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-100px;}
+/* <section class="brand">-END */
+
+/* <section class="projects"> */
+section.projects{width:100%; background-color: rgb(27,27,27); color:#fff; padding-bottom: 50px;}
+section.projects .container{width:98%; margin:0 auto;}
+section.projects .container ul{width:100%;}
+section.projects .container ul li{width:24.2%; float:left; margin-right:1%;}
+section.projects .container ul li:last-child{margin-right: 0;}
+section.projects .container ul li .img{width:100%; position: relative; overflow: hidden;}
+section.projects .container ul li .img a img{width:100%; transition: 0.8s;}
+
+section.projects .container ul li .img:hover a img{transform: scale(1.1); transition: 0.8s;}
+
+section.projects .container ul li .img .projectTitle{text-align: right; bottom: 0; right:0; position: absolute; width:280px; height:90px; background: rgb(27,27,27);}
+section.projects .container ul li .img .projectTitle h4{margin-top: 20px;}
+section.projects .container ul li .img .projectTitle p{text-transform: uppercase; margin-top: 10px; font-size: 25px;}
+/* <section class="projects">-end */
+
+/* <section class="ourCustomer"> */
+section.ourCustomer{ padding:100px 0px; width:100%; background-color: rgb(27,27,27); color:#fff; font-size: 18px;}
+section.ourCustomer .container{width:60%; margin:0 auto;}
+section.ourCustomer .container h3{font-weight: 500; margin-bottom: 90px;}
+section.ourCustomer .container ul{width:100%;}
+section.ourCustomer .container ul li{width:25%; float:left; padding-bottom: 100px;}
+section.ourCustomer .container ul li .img{width:100%; text-align: center;}
+section.ourCustomer .container ul li:nth-child(1) .img{text-align: left;}
+section.ourCustomer .container ul li:nth-child(5) .img{text-align: left;}
+section.ourCustomer .container ul li:nth-child(4) .img{text-align: right;}
+section.ourCustomer .container ul li:nth-child(8) .img{text-align: right;}
+
+section.ourCustomer .container ul li .img img{opacity:0.3; transition: 0.4s;}
+section.ourCustomer .container ul li:hover .img img{opacity: 1; transition: 0.5s;}
+/* <section class="ourCustomer">-end */
+
+/* <section class="contactNumber"> */
+section.contactNumber{width:100%; background-color: rgb(27,27,27); color:#fff;}
+section.contactNumber .container{ width:85%; height:550px; background:url(../img/contact.jpg) no-repeat; background-attachment: fixed; position: relative;}
+section.contactNumber .container .textBox{position: absolute; left:380px; top:180px; overflow: hidden;}
+section.contactNumber .container .textBox h3{font-size: 18px;}
+section.contactNumber .container .textBox h4{font-size: 55px; margin-top: 60px;}
+section.contactNumber .container .textBox p{font-size: 18px; margin-top: 60px; line-height: 1.4em;}
+/* <section class="contactNumber">-end */
+
+/* footer */
+footer{width:100%; background-color: rgb(27,27,27); color:#fff; font-size: 16px; padding:120px 0px;}
+footer .container{width:93%; margin:0 auto;}
+footer .container .item{float: left; line-height: 1.3em;}
+footer .container .item:nth-child(2){float: left; line-height: 1.9em; margin-left: 350px; font-weight: 500;}
+footer .container .item:nth-child(3){float: left; margin-left: 350px; }
+footer .container .item:nth-child(4){float: right; font-size: 55px;}
+/* footer - end*/
