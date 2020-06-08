@@ -7,7 +7,7 @@ body{font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
 .clearfix:after{content:''; display:block; clear:both;}
 
 /* header */
-header{position:fixed; top:0; width:100%; height:120px; padding-top: 13px;}
+header{position:fixed; top:0; width:100%; height:120px; padding-top: 13px; z-index:500; }
 header .innerHeader{width:93%; margin: 0 auto; position:relative;}
 header a.logo{width:160px; height:60px; position: absolute; top:20px;}
 header a.logo img{width:100%; height:100%; }
@@ -19,6 +19,25 @@ header .openGnb{position: relative; text-transform: uppercase; float:right; colo
 header .openGnb a{padding:40px; padding-right: 80px;}
 header .openGnb span{font-size: 32px; position: absolute; top:32px; left:110px;}
 /* header -end*/
+
+/* header-gnb */
+header .gnbMenu{transition: 0.8s; z-index:500; box-sizing: border-box; padding-top: 100px; position: fixed; right:-601px; width:600px; height:102vh; background-color: #000; top:-13px;}
+header .gnbMenu .container{color:#fff; width: 400px; margin:0 auto;}
+header .gnbMenu .container ul{font-size:38px; font-weight: bold;}
+header .gnbMenu .container ul li{opacity:0.5; margin-bottom: 40px;}
+header .gnbMenu .container .gnbClose{opacity: 0.5; position: absolute; top:100px; right:145px; font-size: 55px; font-weight: bold;}
+
+header .gnbMenu .container ul li:hover{opacity: 1; transition: 0.6s;}
+header .gnbMenu .container .gnbClose:hover{opacity: 1; transition: 0.6s;}
+/* Gnb-work----------------------------------------------------------------------------- */
+header .gnbMenu.on{right:0px; transition: 0.8s;}
+
+/* header-gnb-end */
+
+
+
+
+
 
 /* <section class="slide"> */
 section.slide{background: url(../img/visual1.jpg); width:100%; height:100vh; padding-top:300px; box-sizing: border-box;}
@@ -43,7 +62,7 @@ section.brand .container .leftBox h3{margin-top: 300px; font-size: 36px;}
 section.brand .container .rightBox{position: relative; float:left; margin-left: 100px;}
 section.brand .container .rightBox p{font-size: 24px; line-height: 1.3em;}
 section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
-section.brand .container .rightBox h4{padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-100px;}
+section.brand .container .rightBox h4{ padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-100px;}
 /* <section class="brand">-END */
 
 /* <section class="projects"> */
