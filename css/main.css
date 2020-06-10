@@ -7,10 +7,11 @@ body{font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
 .clearfix:after{content:''; display:block; clear:both;}
 
 /* header */
-header{position:fixed; top:0; width:100%; height:120px; padding-top: 13px; z-index:500; }
+header{transition: 0.7s; position:fixed; top:0; width:100%; height:120px; padding-top: 13px; z-index:500; }
 header .innerHeader{width:93%; margin: 0 auto; position:relative;}
 header a.logo{width:160px; height:60px; position: absolute; top:20px;}
 header a.logo img{width:100%; height:100%; }
+header a.logo img.logo2{display:none;}
 
 header .welcome{float:left;margin-left: 310px; color:#fff; font-size: 18px; font-weight: bold;}
 header .welcome a{padding:40px; display: inline-block;}
@@ -19,6 +20,16 @@ header .openGnb{position: relative; text-transform: uppercase; float:right; colo
 header .openGnb a{padding:40px; padding-right: 80px;}
 header .openGnb span{font-size: 32px; position: absolute; top:32px; left:110px;}
 /* header -end*/
+
+/* header-scroll-effect */
+header:before{transition: 0.7s; content:''; display:block; position:absolute; width:100%; top:-130px; height:130px; background-color: rgb(34,34,34);}
+
+/* work--------------------------------------------------------------------------------------------- */
+header.on{ transition: 0.7s; position:fixed; top:0; width:100%; height:120px; padding-top: 0px; z-index:500; }
+header.on a.logo .logo1{display:none;}
+header.on a.logo .logo2{display:block;}
+header.on:before{transition: 0.7s; content:''; display:block; position:absolute; width:100%; top:-13px; height:130px; background-color: rgb(34,34,34);}
+/* header-scroll-effect-end*/
 
 /* header-gnb */
 header .gnbMenu{transition: 0.8s; z-index:500; box-sizing: border-box; padding-top: 100px; position: fixed; right:-601px; width:600px; height:102vh; background-color: #000; top:-13px;}
@@ -31,23 +42,38 @@ header .gnbMenu .container ul li:hover{opacity: 1; transition: 0.6s;}
 header .gnbMenu .container .gnbClose:hover{opacity: 1; transition: 0.6s;}
 /* Gnb-work----------------------------------------------------------------------------- */
 header .gnbMenu.on{right:0px; transition: 0.8s;}
-
 /* header-gnb-end */
 
 
-
-
-
-
 /* <section class="slide"> */
-section.slide{background: url(../img/visual1.jpg); width:100%; height:100vh; padding-top:300px; box-sizing: border-box;}
-section.slide .container{ position: relative; color:#fff; width:80%; margin:0 auto;}
+section.slide{width:100%; height:100vh; box-sizing: border-box;}
+section.slide .slider{width:100%; height:100%; position: relative;}
+section.slide img{ width:100vw; height:100vh;}
+section.slide .container{ position: absolute; color:#fff; width:40%; top:300px; left:250px;}
 section.slide .container h3{font-size: 18px; margin-bottom: 20px;}
 section.slide .container p{font-size: 65px; font-weight: bold; line-height: 1.3em;}
 section.slide .container h4{font-size: 18px; margin-top: 30px;}
 
 section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-140px; transform: rotate(-90deg);}
+/* ------------------------------------------------------------------------------------ */
+/* slide section animation apply */
+
+
+
+
+
+/* slick-modify */
+.slick-next.slick-arrow{border:none; text-indent:-99999px; position:absolute; bottom:0; right:0; z-index:800;  width:60px; height:60px;}
+.slick-next.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'>'; text-align: center; font-size: 50px; font-weight: bold; position: absolute; top:0; right:0;}
+
+.slick-prev.slick-arrow{border:none; text-indent:-99999px; position:absolute; bottom:0; right:60px; z-index:10;  width:60px; height:60px;}
+.slick-prev.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'<'; text-align: center; font-size: 50px; font-weight: bold; position: absolute; top:0; right:0;}
+
 /* <section class="slide - end */
+
+
+
+
 
 /* <section class="brand"> */
 section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
