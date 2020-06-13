@@ -13,11 +13,12 @@ header a.logo{width:160px; height:60px; position: absolute; top:20px;}
 header a.logo img{width:100%; height:100%; }
 header a.logo img.logo2{display:none;}
 
-header .welcome{float:left;margin-left: 310px; color:#fff; font-size: 18px; font-weight: bold;}
+header .welcome{float:left;margin-left: 20%; color:#fff; font-size: 18px; font-weight: bold;}
 header .welcome a{padding:40px; display: inline-block;}
 
 header .openGnb{position: relative; text-transform: uppercase; float:right; color:#fff; font-size: 18px; font-weight: bold;}
 header .openGnb a{padding:40px; padding-right: 80px;}
+header .openGnb a span.menu{position: absolute; top:35px; left:0;}
 header .openGnb span{font-size: 32px; position: absolute; top:32px; left:110px;}
 /* header -end*/
 
@@ -44,11 +45,10 @@ header .gnbMenu .container .gnbClose:hover{opacity: 1; transition: 0.6s;}
 header .gnbMenu.on{right:0px; transition: 0.8s;}
 /* header-gnb-end */
 
-
 /* <section class="slide"> */
 section.slide{width:100%; height:100vh; box-sizing: border-box;}
 section.slide .slider{width:100%; height:100%; position: relative;}
-section.slide img{ width:100vw; height:100vh;}
+section.slide img{ position:relative; right:0; bottom:0;}
 section.slide .container{ position: absolute; color:#fff; width:40%; top:300px; left:250px;}
 section.slide .container h3{font-size: 18px; margin-bottom: 20px;}
 section.slide .container p{font-size: 65px; font-weight: bold; line-height: 1.3em;}
@@ -57,35 +57,58 @@ section.slide .container h4{font-size: 18px; margin-top: 30px;}
 section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-140px; transform: rotate(-90deg);}
 /* ------------------------------------------------------------------------------------ */
 /* slide section animation apply */
+section.slide .slick-active .container h3{animation-name: h3; animation-duration: 0.8s;}
+@keyframes h3{
+    0%{ position: relative; top:-60px; transform: rotateX(-180deg);}
+    50%{ position: relative; top:-80px; transform: rotateX(-90deg);}
+    100%{ position: relative; top:0px; transform: rotateX(0deg); }
+}
+section.slide .slick-active .container h4{animation-name: h4; animation-duration: 0.8s;}
+@keyframes h4{
+    0%{ position: relative; top:-60px; transform: rotateX(-180deg);}
+    50%{ position: relative; top:-80px; transform: rotateX(-90deg);}
+    100%{ position: relative; top:0px; transform: rotateX(0deg); }
+}
 
+section.slide .slick-active .container p{animation-name: p; animation-duration: 0.8s;}
+@keyframes p{
+    0%{ position: relative; left:-10px; }
+    50%{ position: relative; left:-100px; }
+    100%{ position: relative; left:0px; }
+}
 
-
-
+section.slide .slick-active .container span{animation-name: span; animation-duration: 0.8s;}
+@keyframes span{
+    0%{  left:-340px; }
+    50%{  left:-300px; }
+    100%{  left:-140px; }
+}
+/* slide section animation apply end----------------------------------------------------------*/
 
 /* slick-modify */
-.slick-next.slick-arrow{border:none; text-indent:-99999px; position:absolute; bottom:0; right:0; z-index:800;  width:60px; height:60px;}
-.slick-next.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'>'; text-align: center; font-size: 50px; font-weight: bold; position: absolute; top:0; right:0;}
+.slick-next.slick-arrow{cursor: pointer; border:none; text-indent:-99999px; position:absolute; bottom:0; right:0; z-index:10;  width:60px; height:60px;}
 
-.slick-prev.slick-arrow{border:none; text-indent:-99999px; position:absolute; bottom:0; right:60px; z-index:10;  width:60px; height:60px;}
-.slick-prev.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'<'; text-align: center; font-size: 50px; font-weight: bold; position: absolute; top:0; right:0;}
+.slick-next.slick-arrow:after{ text-indent:0px; width:60px; height:60px; content:'>'; text-align: center; font-size: 50px;  position: absolute; top:0; right:0;}
+.slick-next.slick-arrow:hover:after{color:red;}
+
+.slick-prev.slick-arrow{ cursor: pointer; border:none; text-indent:-99999px; position:absolute; bottom:0; right:60px; z-index:10;  width:60px; height:60px;}
+.slick-prev.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'<'; text-align: center; font-size: 50px;  position: absolute; top:0; right:0;}
+.slick-prev.slick-arrow:hover:after{color:red;}
 
 /* <section class="slide - end */
-
-
-
 
 
 /* <section class="brand"> */
 section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
 section.brand .container{ width:62%; margin:0 auto;}
-section.brand .container .leftBox{float:left;}
+section.brand .container .leftBox{float:left; width:30%;}
 section.brand .container .leftBox h2{font-size: 28px; position:relative;}
 section.brand .container .leftBox h2:before{z-index:301; content:'"'; font-size: 150px; position: absolute; top:160px; left:30px;}
 section.brand .container .leftBox h2:after{ z-index:300; border-radius: 50%; left:50px; top:120px; content:''; width:90px; height:90px; background-color: rgb(255,236,3); position: absolute;}
 
 section.brand .container .leftBox h3{margin-top: 300px; font-size: 36px;}
 
-section.brand .container .rightBox{position: relative; float:left; margin-left: 100px;}
+section.brand .container .rightBox{position: relative; float:right;  width:70%;}
 section.brand .container .rightBox p{font-size: 24px; line-height: 1.3em;}
 section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
 section.brand .container .rightBox h4{ padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-100px;}
@@ -135,9 +158,283 @@ section.contactNumber .container .textBox p{font-size: 18px; margin-top: 60px; l
 /* footer */
 footer{width:100%; background-color: rgb(27,27,27); color:#fff; font-size: 16px; padding:120px 0px;}
 footer .container{width:93%; margin:0 auto;}
-footer .container .item{float: left; line-height: 1.3em;}
-footer .container .item:nth-child(2){float: left; line-height: 1.9em; margin-left: 350px; font-weight: 500;}
-footer .container .item:nth-child(3){float: left; margin-left: 350px; }
-footer .container .item:nth-child(4){float: right; font-size: 55px; opacity: 0.5;}
+footer .container .item{float: left; line-height: 1.3em; width:24%; }
+footer .container .item:nth-child(2){float: left; line-height: 1.9em; font-weight: 500; width:24%;}
+footer .container .item:nth-child(2) p{width:45%; margin:0 auto;}
+
+footer .container .item:nth-child(3){float: left; width:24%; overflow: hidden;}
+footer .container .item:nth-child(3) p{width:40%; float:right;}
+
+
+footer .container .item:nth-child(4){float: right; font-size: 55px; opacity: 0.5; width:24%; text-align: right;}
 footer .container .item:nth-child(4):hover{opacity: 1;}
 /* footer - end*/
+
+/*Responsive=================================================================================================== */
+
+@media(max-width:1100px){
+
+/* <section class="slide"> */
+section.slide{width:100%; height:100vh; box-sizing: border-box;}
+section.slide .slider{width:100%; height:100%; position: relative;}
+section.slide img{ width:100vw; height:100vh; }
+section.slide .container{ position: absolute; color:#fff; width:50%; top:300px; left:250px;}
+section.slide .container h3{font-size: 18px; margin-bottom: 20px;}
+section.slide .container p{font-size: 45px; font-weight: bold; line-height: 1.3em;}
+section.slide .container h4{font-size: 18px; margin-top: 30px;}
+
+section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-140px; transform: rotate(-90deg);}
+/* ------------------------------------------------------------------------------------ */
+
+/* <section class="brand"> */
+section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
+section.brand .container{ width:95%; margin:0 auto;}
+section.brand .container .leftBox{float:left; width:30%;}
+section.brand .container .leftBox h2{font-size: 28px; position:relative;}
+section.brand .container .leftBox h2:before{z-index:301; content:'"'; font-size: 150px; position: absolute; top:160px; left:30px;}
+section.brand .container .leftBox h2:after{ z-index:300; border-radius: 50%; left:50px; top:120px; content:''; width:90px; height:90px; background-color: rgb(255,236,3); position: absolute;}
+
+section.brand .container .leftBox h3{margin-top: 300px; font-size: 36px;}
+
+section.brand .container .rightBox{position: relative; float:right;  width:70%;}
+section.brand .container .rightBox p{font-size: 24px; line-height: 1.3em;}
+section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
+section.brand .container .rightBox h4{ padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-10px;}
+/* <section class="brand">-END */
+
+
+/* <section class="projects"> */
+section.projects .container ul li .img a img{width:100%; transition: 0.8s; height:400px;}
+/* <section class="projects">-end */
+
+/* <section class="ourCustomer"> */
+section.ourCustomer .container{width:90%; margin:0 auto;} 
+/* <section class="ourCustomer">-end */
+
+/* <section class="contactNumber"> */
+section.contactNumber .container{  width:85%; height:700px; background:url(../img/contact.jpg) no-repeat; background-attachment: fixed; position: relative;}
+section.contactNumber .container .textBox{position: absolute; left:200px; top:150px; }
+/* <section class="contactNumber">-end */
+
+/* footer */
+footer .container .item{float: left; line-height: 1.3em; width:24%; margin-left:5%;}
+footer .container .item:nth-child(2) p{width:95%; margin:0 auto; }
+footer .container .item:nth-child(3) p{width:75%; float:right;}
+/* footer - end*/
+
+/* @media(max-width:1020px)-end     */
+}
+
+@media(max-width:780px){
+
+    /* <section class="slide"> */
+    section.slide{width:100%; height:100vh; box-sizing: border-box;}
+    section.slide .slider{width:100%; height:100%; position: relative;}
+    section.slide img{ width:auto; height:100vh; left:-700px;}
+    section.slide .container{ position: absolute; color:#fff; width:50%; top:300px; left:70px;}
+    section.slide .container h3{font-size: 18px; margin-bottom: 20px;}
+    section.slide .container p{font-size: 35px; font-weight: bold; line-height: 1.3em;}
+    section.slide .container h4{font-size: 18px; margin-top: 30px;}
+    
+    section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-20px; transform: rotate(-90deg);}
+    /* ------------------------------------------------------------------------------------ */
+    
+
+    /* <section class="brand"> */
+    section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
+    section.brand .container{ width:95%; margin:0 auto;}
+    section.brand .container .leftBox{float:left; width:30%;}
+    section.brand .container .leftBox h2{font-size: 24px; position:relative;}
+    section.brand .container .leftBox h2:before{z-index:301; content:'"'; font-size: 150px; position: absolute; top:160px; left:30px;}
+    section.brand .container .leftBox h2:after{ z-index:300; border-radius: 50%; left:50px; top:120px; content:''; width:90px; height:90px; background-color: rgb(255,236,3); position: absolute;}
+    
+    section.brand .container .leftBox h3{margin-top: 300px; font-size: 36px; width:400px;}
+    
+    section.brand .container .rightBox{position: relative; float:right;  width:65%;}
+    section.brand .container .rightBox p{font-size: 22px; line-height: 1.3em;}
+    section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
+    section.brand .container .rightBox h4{ padding:30px; font-size: 18px; position: absolute; bottom:-220px; right:-10px;}
+    /* <section class="brand">-END */
+    
+    
+    /* <section class="projects"> */
+ /* <section class="projects"> */
+section.projects{width:100%; background-color: rgb(27,27,27); color:#fff; padding-bottom: 50px;}
+section.projects .container{width:98%; margin:0 auto;}
+section.projects .container ul{width:100%;}
+section.projects .container ul li{width:49%; float:left; margin-right:1%;}
+section.projects .container ul li:last-child{margin-right: 0;}
+section.projects .container ul li .img{width:100%; position: relative; overflow: hidden;}
+section.projects .container ul li .img a img{width:100%; transition: 0.8s;}
+
+section.projects .container ul li .img:hover a img{transform: scale(1); transition: 0.8s;}
+
+section.projects .container ul li .img .projectTitle{text-align: right; bottom: 0; right:0; position: relative; width:100%; height:90px; background: rgb(27,27,27);}
+section.projects .container ul li .img .projectTitle h4{margin-top: 20px;}
+section.projects .container ul li .img .projectTitle p{text-transform: uppercase; margin-top: 10px; font-size: 25px;}
+/* <section class="projects">-end */
+
+
+    /* <section class="projects">-end */
+    
+    /* <section class="ourCustomer"> */
+    section.ourCustomer .container{width:95%; margin:0 auto;} 
+    /* <section class="ourCustomer">-end */
+    
+    /* <section class="contactNumber"> */
+    section.contactNumber .container{  width:90%; height:650px; background:url(../img/contact.jpg) no-repeat; background-attachment: fixed; position: relative;}
+    section.contactNumber .container .textBox{position: absolute; left:40px; top:150px; }
+    /* <section class="contactNumber">-end */
+    
+    /* footer */
+    footer .container .item{float: left; line-height: 1.3em; width:24%; margin-left:5%;}
+    footer .container .item:nth-child(2) p{width:95%; margin:0 auto; }
+    footer .container .item:nth-child(3) p{width:75%; float:right;}
+    /* footer - end*/
+    
+    /* @media(max-width:780px)-end     */
+    }
+
+
+@media(max-width:680px){
+
+/* header */
+header{transition: 0.7s; position:fixed; top:0; width:100%; height:120px; padding-top: 13px; z-index:500; }
+header .innerHeader{width:93%; margin: 0 auto; position:relative;}
+header a.logo{width:160px; height:60px; position: absolute; top:20px;}
+header a.logo img{width:70%; height:70%; }
+header a.logo img.logo2{display:none;}
+
+header .welcome{float:left;margin-left: 100px; color:#fff; font-size: 18px; font-weight: bold;}
+header .welcome a{padding:40px; display: inline-block;}
+
+header .openGnb{position: relative; text-transform: uppercase; float:right; color:#fff; font-size: 18px; font-weight: bold;}
+header .openGnb a{padding:40px; padding-right: 80px;}
+header .openGnb span{font-size: 32px; position: absolute; top:32px; left:80px;}
+
+header .openGnb a .menu{display: none;}
+/* header -end*/
+
+/* work--------------------------------------------------------------------------------------------- */
+header.on{ transition: 0.7s; position:fixed; top:0; width:100%; height:120px; padding-top: 0px; z-index:500; }
+header.on .welcome{display: none;}
+header.on a.logo .logo1{display:none;}
+
+header.on a.logo
+header.on a.logo .logo2{display:block;}
+
+header.on:before{transition: 0.7s; content:''; display:block; position:absolute; width:100%; top:-13px; height:100px; background-color: rgb(34,34,34);}
+/* header-scroll-effect-end*/
+
+
+/* header-gnb */
+header .gnbMenu{transition: 0.8s; z-index:500; box-sizing: border-box; padding:100px 0 0 50px; position: fixed; right:-601px; width:300px; height:102vh; background-color: #000; top:-13px;}
+header .gnbMenu .container{color:#fff; width: 400px; margin:0 auto;}
+header .gnbMenu .container ul{font-size:24px; font-weight: bold;}
+header .gnbMenu .container ul li{opacity:0.5; margin-bottom: 40px;}
+header .gnbMenu .container .gnbClose{opacity: 0.5; position: absolute; top:100px; right:45px; font-size: 40px; font-weight: bold;}
+
+header .gnbMenu .container ul li:hover{opacity: 1; transition: 0.6s;}
+header .gnbMenu .container .gnbClose:hover{opacity: 1; transition: 0.6s;}
+/* Gnb-work----------------------------------------------------------------------------- */
+header .gnbMenu.on{right:0px; transition: 0.8s;}
+/* header-gnb-end */
+
+
+/* <section class="slide"> */
+    section.slide{width:100%; height:100vh; box-sizing: border-box;}
+    section.slide .slider{width:100%; height:100%; position: relative;}
+    section.slide img{ width:auto; height:auto; left:-800px; top:-100px;}
+    section.slide .container{ position: absolute; color:#fff; width:50%; top:300px; left:70px;}
+    section.slide .container h3{font-size: 14px; margin-bottom: 25px; font-weight: 400;}
+    section.slide .container p{font-size: 25px; font-weight: bold; line-height: 1.3em;}
+    section.slide .container h4{font-size: 14px; margin-top: 30px; font-weight: 400;}
+    
+    section.slide .container span.scroll{color:#fff; position: absolute; top:530px; left:-20px; transform: rotate(-90deg);}
+/* ------------------------------------------------------------------------------------ */
+/* slick-modify */
+.slick-next.slick-arrow{cursor: pointer; border:none; text-indent:-99999px; position:absolute; bottom:0; right:0; z-index:10;  width:60px; height:60px;}
+
+.slick-next.slick-arrow:after{ text-indent:0px; width:60px; height:60px; content:'>'; text-align: center; font-size: 30px;  position: absolute; top:6px; right:0;}
+.slick-next.slick-arrow:hover:after{color:red;}
+
+.slick-prev.slick-arrow{ cursor: pointer; border:none; text-indent:-99999px; position:absolute; bottom:60px; right:0px; z-index:10;  width:60px; height:60px;}
+.slick-prev.slick-arrow:after{text-indent:0px; width:60px; height:60px; content:'<'; text-align: center; font-size: 30px;  position: absolute; top:6px; right:0;}
+.slick-prev.slick-arrow:hover:after{color:red;}
+
+/* <section class="slide - end */
+
+
+/* <section class="brand"> */
+section.brand{width:100%; background-color: rgb(27,27,27); color:#fff; padding-top: 120px; padding-bottom: 50px;}
+section.brand .container{ width:90%; margin:0 auto; position: relative;}
+section.brand .container .leftBox{float:left; width:100%;}
+section.brand .container .leftBox h2{font-size: 24px; position:relative;}
+section.brand .container .leftBox h2:before{z-index:301; content:'"'; font-size: 150px; position: absolute; top:160px; left:30px;}
+section.brand .container .leftBox h2:after{ z-index:300; border-radius: 50%; left:50px; top:120px; content:''; width:90px; height:90px; background-color: rgb(255,236,3); position: absolute;}
+
+section.brand .container .leftBox h3{margin-top: 500px; font-size: 24px;}
+
+section.brand .container .rightBox{position: absolute; float:right;  width:100%; top:250px;}
+section.brand .container .rightBox p{font-size: 20px; line-height: 1.5em; width:100%;}
+section.brand .container .rightBox h3{margin-top: 40px; font-size: 18px;}
+section.brand .container .rightBox h4{ padding:30px; font-size: 14px; position: absolute; bottom:-200px; right:0px;}
+/* <section class="brand">-END */
+
+ /* <section class="projects"> */
+ section.projects{width:100%; background-color: rgb(27,27,27); color:#fff; padding-bottom: 50px;}
+ section.projects .container{width:95%; margin:0 auto;}
+ section.projects .container ul{width:100%;}
+ section.projects .container ul li{width:100%; }
+
+ section.projects .container ul li .img{width:100%; position: relative; overflow: hidden;}
+ section.projects .container ul li .img a img{width:130%; transition: 0.8s; height:130%;}
+ 
+ section.projects .container ul li .img:hover a img{transform: scale(1); transition: 0.8s;}
+ 
+ section.projects .container ul li .img .projectTitle{text-align: left; bottom: 0; right:0; position: relative; width:100%; height:90px; background: rgb(27,27,27);}
+ section.projects .container ul li .img .projectTitle h4{margin-top: 20px;}
+ section.projects .container ul li .img .projectTitle p{text-transform: uppercase; margin-top: 10px; font-size: 25px;}
+ /* <section class="projects">-end */
+
+/* <section class="ourCustomer"> */
+section.ourCustomer{ padding:100px 0px; width:100%; background-color: rgb(27,27,27); color:#fff; font-size: 18px;}
+section.ourCustomer .container{width:95%; margin:0 auto;}
+section.ourCustomer .container h3{font-weight: 500; margin-bottom: 90px;}
+section.ourCustomer .container ul{width:100%;}
+section.ourCustomer .container ul li{width:49%; float:left; padding-bottom: 100px;}
+section.ourCustomer .container ul li .img{width:100%; text-align: center;}
+section.ourCustomer .container ul li:nth-child(1) .img{text-align: center;}
+section.ourCustomer .container ul li:nth-child(5) .img{text-align: center;}
+section.ourCustomer .container ul li:nth-child(4) .img{text-align: center;}
+section.ourCustomer .container ul li:nth-child(8) .img{text-align: center;}
+
+section.ourCustomer .container ul li .img img{opacity:0.3; transition: 0.4s;}
+section.ourCustomer .container ul li:hover .img img{opacity: 1; transition: 0.5s;}
+/* <section class="ourCustomer">-end */
+
+/* <section class="contactNumber"> */
+section.contactNumber .container{  width:90%; height:650px; background:url(../img/contact.jpg) no-repeat; background-attachment: fixed; position: relative;}
+section.contactNumber .container .textBox{position: absolute; left:40px; top:150px; }
+section.contactNumber .container .textBox h4{font-size: 30px;}
+/* <section class="contactNumber">-end */
+
+/* footer */
+footer{width:100%; background-color: rgb(27,27,27); color:#fff; font-size: 16px; padding:120px 0px;}
+footer .container{width:93%; margin:0 auto; position: relative;}
+footer .container .item{margin-bottom: 30px;}
+footer .container .item:first-child{float: left; line-height: 1.3em; width:100%; }
+footer .container .item:nth-child(2){float: left; line-height: 1.9em; font-weight: 500; width:100%;}
+footer .container .item:nth-child(2) p{width:45%; float: left;}
+
+footer .container .item:nth-child(3){float: left; width:100%; }
+footer .container .item:nth-child(3) p{width:40%; float:left;}
+
+
+footer .container .item:nth-child(4){position: absolute; bottom:-110px; right:0; font-size: 35px; opacity: 0.5; width:24%; text-align: right;}
+footer .container .item:nth-child(4):hover{opacity: 1;}
+/* footer - end*/
+
+/* @media(max-width:680px)-end     */  
+}
+

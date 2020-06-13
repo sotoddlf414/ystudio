@@ -14,8 +14,6 @@ $(document).on('click', 'a[href="#"]', function(e){
 // a preventDefault-end----------------------------------   
 
 
-
-
 // GNB-MENU
 // Menu-open----------------------------------------------------------------------
 $('.openGnb').click(function(){
@@ -28,7 +26,7 @@ $('.gnbClose, section').click(function(){
 // GNB-MENU-end----------------------------------------------------------------------
 
 
-//Header-scroll-effect-------------------------------------------------------------------
+//Header-scroll-background-effect-------------------------------------------------------------------
 var Y_position = 0;
 
 $(window).scroll(function(){
@@ -51,16 +49,22 @@ $('.animate').scrolla({
 
 
 // slick plug-in apply--------------------------------------
-
 $('.slide').slick({
     arrow:true,
-    dots:false,
     fade:true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
   });
-
 // slick plug-in apply-end--------------------------------------
+
+
+
+// arrow-up-slow-move-effect
+$('.goTop').click(function(){
+     $('html').animate( {scrollTop : 0}, 600 );
+});
+// arrow-up-slow-move-effect-end
+
 
 // jquery-end-----------------------------
 });
